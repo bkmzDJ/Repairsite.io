@@ -7,11 +7,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 3vh;
 }
 :root{
     --darkgray: #1d2125;
     --w: #ffffff;
-    --gray: #4c4a5e;
+    --gray: #b9b8c9;
     --dark: #1a1d20;
     --green: #00e676;
     --blue: #4fc3f7;
@@ -26,6 +27,10 @@ header{
     align-items: center;
     padding: 0 4vw;
     justify-content: space-between;
+    z-index: 999;
+}
+h1{
+    font-size: 6vh;
 }
 .logotype>img{
     height: 7vh;
@@ -59,6 +64,7 @@ header{
     align-items: center;
     justify-content: space-between;
     transition: .7s ease-in-out;
+    cursor: pointer;
 }
 #burger>div{
     background-color: var(--w);
@@ -71,13 +77,14 @@ nav{
     width: 30vw;
     background-color: var(--darkgray);
     height: 91vh;
-    right: 0;
+    right: -30vw;
     top: 9vh;
     transition: .7s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 4vh 0;
+    font-size: 3vh;
 }
 nav>div{
     display: flex;
@@ -92,6 +99,64 @@ main{
     background-color: var(--gray);
     min-height: 100vh;
 }
+@keyframes moviemac {
+    0%{
+        transform: translateY(-1vh);
+    }
+    100%{
+        transform: translateY(1vh);
+    }
+}
 .first-w>img{
-    width: 35vw;
+    width: 45vh;
+    animation: moviemac 3s ease-in-out infinite alternate;
+}
+.welcome{
+    min-height: 100vh;
+    padding-top: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+.first-w{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.second-w{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: center;
+    justify-content: center;
+}
+.second-w>p, .second-w>h1{width: 100%;}
+.btn{
+    background-color: var(--dark);
+    color: var(--w);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+    height: 7vh;
+    width: 15vw;
+    transition: .3s ease-in-out;
+}
+.btn:hover{
+    width: 18vw;
+    background-color: #5a1d00;
+}
+.info{
+    min-height: 100vh;
+    padding: 10vh 4vw 0 4vw;
+}
+.info>h1{
+    width: 100%;
+    text-align: center;
+}
+.info>p{
+    width: 100%;
+    margin: 7vh 0;
 }
