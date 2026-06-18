@@ -9,6 +9,9 @@
     padding: 0;
     font-size: 3vh;
 }
+html{
+    scroll-behavior: smooth;
+}
 :root{
     --darkgray: #1d2125;
     --w: #ffffff;
@@ -113,7 +116,7 @@ main{
 }
 .welcome{
     min-height: 100vh;
-    padding-top: 9vh;
+    padding: 9vh 4vw 0 4vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,4 +162,69 @@ main{
 .info>p{
     width: 100%;
     margin: 7vh 0;
+    
+}
+.grid-block{
+    display: grid;
+    grid-template: 1fr 1fr/repeat(3, 1fr);
+    grid-template-areas: 
+    "a i c"
+    "b i d"
+    ;
+    height: 60vh;
+    gap: 1vh;
+    align-items: center;
+    justify-content: center;
+}
+.grid-block>p{
+    border-radius: 1vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 130px;
+    transition: .1s ease-in-out;
+    box-shadow: 0 0 4vh rgba(0, 0, 0, 0.4);
+}
+.grid-block>p:hover{
+    background-color: #240b00be;
+    box-shadow: 0 0 1vh #5a1d00;
+    transform: translateY(-1vh);
+}
+.g3{
+    height: 100%;
+    grid-area: "i";
+    grid-row: span 2;
+}
+.g1{grid-area: a;}
+.g2{grid-area: b;}
+.g4{grid-area: c;}
+.g5{grid-area: d;}
+.table{
+    min-height: 100vh;
+    padding: 10vh 4vw 0 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+table{
+    width: 100%;
+    background-image: url(../img/bgtable.png);
+    background-position: center;
+    background-size: cover;
+    text-shadow: 0 0 1vh #000000;
+    color: #fff;
+    border-radius: 1vh;
+}
+thead{
+    font-weight: bolder;
+}
+td{
+    border-radius: 1vh;
+    border: 0.1vh solid rgba(0, 0, 0, 0.5);
+    padding: 1vh;
 }
