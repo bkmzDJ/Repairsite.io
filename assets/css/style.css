@@ -211,6 +211,9 @@ main{
     flex-direction: column;
     gap: 5vh;
 }
+.table>h1{
+    text-align: center;
+}
 table{
     width: 100%;
     background-image: url(../img/bgtable.png);
@@ -222,9 +225,40 @@ table{
 }
 thead{
     font-weight: bolder;
+    background-color: #00000057;
 }
 td{
-    border-radius: 1vh;
-    border: 0.1vh solid rgba(0, 0, 0, 0.5);
     padding: 1vh;
+}
+tbody>tr>td:first-child{
+    text-decoration: underline;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+.calculator{
+    display: grid;
+    gap: 3vh;
+    grid-template: 1fr 1fr/1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+select{
+    background-color: #00000025;
+    padding: 1vh;
+}
+label[for="service"]{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+label>span{
+    font-weight: bold;
+}
+.reviews{
+    padding-top: 10vh;
+}
+.reviews>h1{
+    text-align: center;
 }

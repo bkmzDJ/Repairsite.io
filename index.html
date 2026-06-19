@@ -51,9 +51,9 @@
           </thead>
           <tbody>
             <tr>
-              <td>Замена экрана телефона</td>
-              <td>от 1500 ₽</td>
-              <td>30–60 мин</td>
+              <td>Замена защитного стекла</td>
+              <td>от 600 ₽</td>
+              <td>5 мин</td>
             </tr>
             <tr>
               <td>Замена аккумулятора</td>
@@ -71,7 +71,7 @@
               <td>1–2 часа</td>
             </tr>
             <tr>
-              <td>Замена матрицы ноутбука</td>
+              <td>Замена дисплея/матрицы</td>
               <td>от 3500 ₽</td>
               <td>1–2 дня</td>
             </tr>
@@ -82,6 +82,50 @@
             </tr>
           </tbody>
         </table>
+        <p>Здесь вы можете посмотреть возможные цены на популярные устройства</p>
+        <div class="calculator">
+          <label for="model">Модель:
+            <select name="model" id="model">
+              <optgroup label="Смартфоны">
+                <option value="220">Apple iPhone 16</option>
+                <option value="110">Realme Note 50</option>
+                <option value="170">Samsung Galaxy A16</option>
+                <option value="110">Xiaomi Redmi 9C NFC</option>
+              </optgroup>
+              <optgroup label="Ноутбуки">
+                <option value="330">HUAWEI MateBook D16</option>
+                <option value="400">HUAWEI MateBook D14</option>
+                <option value="420">HONOR MagicBook X16 (2025)</option>
+                <option value="400">TECNO Megabook K16</option>
+              </optgroup>
+              <optgroup label="Планшеты">
+                <option value="250">Apple iPad 11 (2025)</option>
+                <option value="290">HUAWEI MatePad 11.5</option>
+                <option value="190">Apple iPad 10.2 (2021)</option>
+                <option value="300">Xiaomi Pad 2</option>
+              </optgroup>
+            </select>
+          </label>
+          <label for="service">Услуга:
+            <select name="service" id="service">
+              <option value="600">Замена защитного стекла/пленки</option>
+              <option value="1200">Замена аккумулятора</option>
+              <option value="2000">Чистка после воды</option>
+              <option value="1800">Замена разъёма зарядки</option>
+              <option value="3500">Замена дисплея/матрицы</option>
+              <option value="1500">Чистка и термопаста</option>
+            </select>
+          </label>
+          <label for="">
+            Цена: <span id="price">820 ₽</span>
+          </label>
+          <label for="">
+            Время починки: <span id="time">5 мин</span>
+          </label>
+        </div>
+      </section>
+      <section class="reviews">
+        <h1>Отзывы</h1>
       </section>
     </main>
     <script src="./assets/script/script.js"></script>
