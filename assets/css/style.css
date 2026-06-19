@@ -248,6 +248,7 @@ label{
 select{
     background-color: #00000025;
     padding: 1vh;
+    height: 7vh;
 }
 label[for="service"]{
     grid-row: 2/3;
@@ -255,10 +256,39 @@ label[for="service"]{
 }
 label>span{
     font-weight: bold;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark);
+    color: var(--w);
+    padding: 1vh;
+    border-radius: 2vh;
 }
 .reviews{
     padding-top: 10vh;
+    min-height: 100vh;
 }
 .reviews>h1{
     text-align: center;
+}
+.reviews-block{
+    position: relative;
+    display: flex;
+    height: 80vh;
+}
+.item{
+    background-color: #8f8f7b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vh;
+    border-radius: 4vh;
+    width: 60vw;
+}
+.stars{
+    display: flex;
+    gap: .5vw;
+}
+.stars>img{
+    height: 3.5vh;
 }
