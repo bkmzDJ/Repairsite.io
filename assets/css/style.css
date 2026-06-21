@@ -20,6 +20,9 @@ html{
     --green: #00e676;
     --blue: #4fc3f7;
 }
+section>h1{
+    text-align: center;
+}
 header{
     position: fixed;
     height: 9vh;
@@ -186,7 +189,7 @@ main{
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-width: 130px;
+
     transition: .1s ease-in-out;
     box-shadow: 0 0 4vh rgba(0, 0, 0, 0.4);
 }
@@ -210,9 +213,6 @@ main{
     display: flex;
     flex-direction: column;
     gap: 5vh;
-}
-.table>h1{
-    text-align: center;
 }
 table{
     width: 100%;
@@ -267,23 +267,38 @@ label>span{
 .reviews{
     padding-top: 10vh;
     min-height: 100vh;
-}
-.reviews>h1{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
 }
 .reviews-block{
     position: relative;
     display: flex;
-    height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    border: .5vh solid var(--darkgray);
+    border-radius: 2vh;
+    width: 80vw;
+    overflow-y: scroll;
+    gap: 3vh;
+    padding: 4vh 0;
+}
+.reviews-block::-webkit-scrollbar{
+    display: none;
 }
 .item{
-    background-color: #8f8f7b;
+    background-color: #c4a890;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 3vh;
     padding: 2vh;
     border-radius: 4vh;
-    width: 60vw;
+    width: 90%;
+    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.3);
 }
 .stars{
     display: flex;
@@ -291,4 +306,82 @@ label>span{
 }
 .stars>img{
     height: 3.5vh;
+}
+.contact{
+    padding: 10vh 2vh 5vh 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #323941;
+    color: #fff;
+    gap: 2vh;
+    
+}
+.map-image{
+    background-image: url(../img/map.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+    height: 50vh;
+    display: block;
+    margin: 4vh 0;
+    border-radius: 2vh;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.4);
+}
+.contact a{
+    color: var(--blue);
+}
+footer{
+    background-color: var(--dark);
+    color: #fff;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socimg{
+    display: flex;
+    gap: 1vw;
+}
+.txtsoc{
+    background-color: var(--dark);
+    padding: 1vh;
+    border-radius: 1vh;
+    width: 50%;
+    text-align: center;
+}
+.socimg>img{
+    width: 6vh;
+}
+@media (max-width: 880px){
+    .map-image{
+        width: 95%;
+    }
+}
+@media (max-width: 650px){
+    .grid-block{
+    grid-template: repeat(3, 1fr)/1fr 1fr;
+    grid-template-areas: 
+    "a c"
+    "i i"
+    "d b"
+    ;
+    height: 60vh;
+    gap: 1vh;
+    align-items: center;
+    justify-content: center;
+}
+.grid-block>p{
+    height: 15vh;
+    font-size: 2.2vh;
+}
+.g3{
+    grid-column: 1/3;
+    grid-row: span 1;
+    width: 30vh;
+}
+}
+@media (max-width: 480px){
+    
 }
